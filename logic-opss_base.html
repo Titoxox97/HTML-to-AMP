@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-NVFXS26');</script>
+    <!-- End Google Tag Manager -->
+
+    <title>Logical Operators: Greater Than, Less Than, Equal, and More!</title>
+    <meta name="description" content="Logical operators (<, >, =, <>, <=, >=) form the basis of logical decision making in Excel formulas and are critical for writing effective IF statements." />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="canonical" href="https://excelexercises.com/excel-functions/logical-operators.html"/>
+    <link rel="stylesheet" href="../base.css">
+    <link rel="stylesheet" href="https://excelexercises.com/blackTheme.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+    <style>
+        body{
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        p{
+            font-size: 18px; 
+        }
+        h1, h2, h3, h4, h5, h6{
+            font-family: "Montserrat";
+        }
+    </style>
+    
+    
+</head>
+<body>
+    
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NVFXS26"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+      
+<!-- Navbar -->
+<div class="w3-top w3-hide-medium w3-hide-small">
+  <div class="w3-bar w3-theme w3-top w3-left-align w3-large" style="border-bottom-width: 1.0; border-bottom: 1px solid lightgray;">
+      
+    <a class="w3-bar-item w3-button w3-right w3-hide-large w3-hover-white w3-large w3-theme-l1" href="javascript:void(0)" onclick="w3_open()"><i class="fa fa-bars"></i></a>
+          
+    <a href="https://excelexercises.com" class="w3-bar-item w3-button w3-theme-l5"><img style="width: 200px;" src="https://excelexercises.com/logo2.png" alt="Excel Exercises Practice"/></a>
+    
+    <button onclick="location.href = 'https://excelexercises.com/lessons.html';" class=" basicBarButton  w3-button w3-hide-small w3-hover-black ">Practice</button>
+    
+    <button onclick="location.href = 'https://excelexercises.com/excel-functions.html';" class="basicBarButton w3-button w3-hide-small w3-hover-black">Blog</button>
+    
+    <span style="float: right; display: none;">Name</span>
+    
+    <button onclick="location.href = 'https://excelexercises.com/login.html';" class="barLogInButton w3-button w3-hide-small w3-hover-black" id="logInButton">Log in</button>
+  </div>
+</div>
+
+<!-- Main content -->
+
+<div class="w3-row w3-padding-64">
+    <div class="blogContent">
+        
+        <h1>Excel Wildcards and How to Use Them in Search Functions</h1>
+        <p>
+            Wildcards are often overlooked as one of the more useful features of Excel. Using these characters can increase efficiency and flexibility when searching through text data. Wildcard characters are used in a variety of Excel functions ranging from VLOOKUPS to SUMIFS. We will take a closer look at why some functions use them and others don’t later in this post.
+        </p>
+        
+        <BR/>
+        
+        <div>
+            <h2><span style="color: #29b277;"></span> Types of Wildcards</h2>
+            <p>There are three types of wildcards in Excel, all which act as a placeholder item when searching strings of text for partial data matches. The three are:</p>
+            <table>
+                <tr>
+                   <td><strong>?</strong> : Used to represent a single character.</td>
+                </tr>
+                <tr>
+                   <td><strong>*</strong> : Represents a string of characters of any length.</td>
+                </tr>
+                <tr>
+                   <td><strong>~</strong> : Is used to identify a “?”, “~” or “*” character, as literal in a search function. Indicates that a * or a ? is not a wildcard in a string of text.</td>
+                </tr>
+            </table>
+        </div>
+
+        </BR>
+
+        <div>
+            <h2><span style="color: #29b277;"></span>Question Mark (?) - Example</h2>
+            <p>The ? (question mark) represents any single character. For example, from the table below we have a list of foods that start with the letter “L”. When we search for “Le?on”, Excel will return “Lemon” to us because the “?” character acts as a placeholder for the single letter there, in this case 'm'. </p>
+            <img src="./examples/search1.png" alt="Wildcard search example (?)">
+            <img src="./examples/table1.png" alt="Example data table used for wildcard search">
+            <p>We can also use “?” multiple times to represent multiple characters. For example, given the list of three letter words below, if we search “c??”, Excel will return all the three letter words beginning with “c”. </p>
+            <img src="./examples/search2.png" alt="Wildcard search example (multiple ?)">
+            <img src="./examples/table2.png" alt="Example data table used for wildcard search">
+        </div>
+
+        <BR/>
+
+        <div>
+            <h2><span style="color: #29b277;"></span>Asterisk (*) - Example</h2>
+            <p>The * (asterisk) acts as a stand in for a string of characters of any length. Looking at the list of A24 movies below, if we search for “Un*”, Excel will return a list of all the A24 movies beginning with “Un” and followed by any string of letters afterward. In this example, Excel will return “Under the Skin”, “Under the Silver Lake”, and “Uncut Gems”. </p>
+            <img src="./examples/search3.png" alt="Wildcard search example (*)">
+            <img src="./examples//table3.png" alt="Example data table used for wildcard search">
+        </div>
+               
+        <BR/>
+
+        <div>
+            <h2><span style="color: #29b277;"></span>Tilde (~) - Example</h2>
+            <p>The ~ (tilde) is used to indicate a literal asterisk, question mark, or a tilde, that is part of the search string and not identified as a wildcard. It signals that the asterisk, question mark, or tilde is actually part of the text you are searching for. Checking the list of phrases which contain wildcard characters below, when searching for a wildcard contained in the search criteria we can put the tilde before the wildcard character to configure the search function to identify the question mark character as a string, rather than a wildcard value. In the example below, searching for “~?” will return all values containing “?” within the string, so in this case “Question Mark?” will be returned. </p>
+            <img src="./examples/search4.png" alt="Wildcard search example (~)">
+        </div>
+
+        </BR>
+
+        <div>
+            <h2><span style="color: #29b277;"></span>When to Use Wildcard Characters in Excel</h2>
+            <table>
+                <tr>
+                <th>Popular Functions that Support Wildcard Characters</th>
+                </tr>
+                <tr>
+                    <td>AVERAGEIF</td>
+                </tr>
+                <tr>
+                    <td>AVERAGEIFS</td>
+                </tr>
+                <tr>
+                    <td>COUNTIF</td>
+                </tr>
+                <tr>
+                    <td>COUNTIFS</td>
+                </tr>
+                <tr>
+                    <td>VLOOKUP</td>
+                </tr>
+                <tr>
+                    <td>HLOOKUP</td>
+                </tr>
+                <tr>
+                    <td>MATCH</td>
+                </tr>
+                <tr>
+                    <td>MAXIFS</td>
+                </tr>
+                <tr>
+                    <td>MINIFS</td>
+                </tr>
+                <tr>
+                    <td>SEARCH</td>
+                </tr>
+                <tr>
+                    <td>SEARCHB</td>
+                </tr>
+                <tr>
+                    <td>SUMIF</td>
+                </tr>
+                <tr>
+                    <td>SUMIFS</td>
+                </tr>
+            </table>
+            <p><small><b>*The complete list can be found at https://exceluser.com/712/guide-to-using-wildcards-in-excel-worksheet-functions/</b></small></p>
+        </div>
+
+        </BR>
+
+        <div>
+            <h2><span style="color: #29b277;"></span>Statistical Functions - <small>(SUMIF, SUMIFS, COUNTIFS, COUNTIF, AVERAGEIF, AVERAGEIFS, MAXIFS, MINIFS)</small></h2>
+            <p>Using wildcard characters for search criteria can increase the flexibility of these functions. In the example below, we can see how using wildcard characters can be advantageous for finding statistics based on string patterns rather than exact matches. The first criteria table searches for strings beginning with “Da” within the search area, while the second criteria table, NOT using wildcards, searches for strings with an exact match to “Da”. Therefore the first criteria (using wildcards) returns 5 results (Davis, Davies, Davidson, Daisy, Da). Whereas the second criteria NOT using wildcards returns 1 result, since only one of the names is an exact match to “Da”. </p>
+            <img src="./examples/Funcs-stats.png" alt="Statistical function examples using wildcards">
+        </div>
+       
+        <BR/>
+
+        <div>
+            <h2><span style="color: #29b277;"></span>Lookup Functions - <small>(SUMIF, SUMIFS, COUNTIFS, COUNTIF, AVERAGEIF, AVERAGEIFS, MAXIFS, MINIFS)</small></h2>
+            <p>Both VLOOKUPs and HLOOKUPs allow an approximate match mode, and using wildcard characters in this mode won’t return the correct accurate result every time. However when used in exact match mode (the fourth argument is false) wildcards allow for more specificity and precision in a search using either lookup function. Below are examples of VLOOKUP and HLOOKUP functions using a wildcard in the lookup value to search for string patterns. </p>
+            <p>For the VLOOKUP function, we use an asterisk to represent a string of characters when“M*s” is input as the lookup value.  The third column has been inserted as the row index number to retrieve the job type of the first person whose name (of any length) begins with “M” and ends in “s”, then zero in the range lookup to ensure we are in exact match mode. The lookup identifies “Miles” as a match for the criteria given, and returns his job type, which is “Salesman”. </p>
+            <img src="./examples/Funcs-look.png" alt="Data table and results for vlookup search using wildcards">
+            <img src="./examples/Funcs-look_args.png" alt="vlookup syntax using wildcard">
+            <p>For the HLOOKUP function example, several question marks are used as placeholders to stand in for individual characters. In the function below, the input for the lookup value field is “J?? T??e”, with row 9 as the row index number. The only value that matches the “J?? T??e” value is “Job Type”. The lookup retrieves the job type from row 9, which in this case is “Tech”. </p>
+            <img src="./examples/funcs-hlook_args.png" alt="hlookup syntax using wildcard">
+            <p>MATCH does not have the same features as VLOOKUP and HLOOKUP. The MATCH function returns the location of the value being searched within a range of cells. Using a wildcard character in the lookup value argument will allow for more customizable searches and more specific search criteria. In the first example below, “L*y” is the lookup value, meaning we are looking for the position of the first text value of any length starting with L and ending in y, in the “First Name” column. Here the function will return 7, because “<b>L</b>ero<b>y</b>” is the first value to match the criteria going down the column in ascending order, and is located in the 7th row. For the second example, there is a lookup value of “Je??e”, which searches in the “First Name” column for the first text value that is exactly five characters long which starts with “Je” and ends with “e”. The MATCH function returns 19, because the first name “<b>J</b><b>e</b>ss<b>e</b>” is located in row 19 and is the first value in the row to meet the criteria of “Je??e”. </p>
+            <img src="./examples/funcs-match.png" alt="match syntax using wildcards">
+        </div>
+       
+        <BR/>
+       
+        <div>
+            <h2><span style="color: #29b277;"></span>Search Functions - <small>(SEARCH, SEARCHB)</small></h2>
+            <p>Wildcards can be used in Excel search functions to identify patterns within strings, and return the position of the string pattern within the string. The first argument in the SEARCH function is the text we are trying to find, and the second argument is the text within which we are trying to find the first argument in. For the examples below, the first search function will show =SEARCH(G3, G4) and the second search function will be represented by =SEARCH(G7, G8). The wildcard characters are utilized within the first argument in both cases to identify the text pattern being searched for. </p>
+            <img src="./examples/funcs-search.png" alt="search function data table and search results">
+        </div>
+
+        <BR/>
+
+        <div>
+            <h2><span style="color: #29b277;"></span>#VALUE! - Error</h2>
+            <p>Excel will return #VALUE! using the Excel SEARCH function if there is no matching string found when using any of the functions compatible with wildcard characters and their use cases.</p>
+            <img src="./examples/error.png" alt="Error message example">
+        </div>
+       
+        <BR/>
+        
+    </div>  
+</div>
+    
+<BR/>
+    <BR/>
+    <div id="practiceProblemDiv" style="padding: 20px; background-color: white; border-top: thin gray solid; position: fixed; bottom: 0px; width: 100%;" align="center">
+        <a href="https://excelexercises.com/practice.html?lesson=48"><h2>Continue to Wildcard Characters practice exercises! <span style="color: #29b277;">→</span></h2></a>
+    </div>
+
+  <footer id="myFooter" style="background-color: #193656;  display: none;">
+    <div class="w3-container w3-padding-32" style="display: flex; width: 90%; margin: auto; background-color: #193656;">
+        <div style="width: 33%;" align="center">
+            <img src="excelImages/logoGreenWhite.png" style="width: 90%;" id="footerLogo"/>
+            <p style="color: white;">&copy; Excel Exercises | All Rights Reserved</p>
+        </div>
+        <div class="footerMid">
+            <a href="https://excelexercises.com/referrals.html">Referral Program</a><BR/>
+            <a href="https://excelexercises.com/sitemap.xml">Sitemap</a><BR/>
+            <a href="https://excelexercises.com/about.html"> About</a><BR/>
+            <a href="https://excelexercises.com/excel-shortcuts.html"> Keyboard Shortcuts</a><BR/>
+            <a href="https://excelexercises.com/excel-functions.html">Functions and Formulas</a><BR/>
+            <a href="https://excelexercises.com/terms.html">Terms of Service</a><BR/>
+            <a href="https://excelexercises.com/privacy.html">Privacy Policy</a>
+        </div>
+        <div class="footerRight">
+            <p>Contact: jake@excelexercises.com</p>
+            <a href="https://www.facebook.com/ExcelExercises/" target="_blank"><img src="excelImages/fbIcon.png" style="height: 30px; width: 30px; background-color: white; border-radius: 5px;"></a>
+            <a href="https://www.linkedin.com/shareArticle?mini=true&url=https://excelexercises.com&title=Excel%20Exercises&source=LinkedIn" target="_blank"><img src="excelImages/liIcon.png" style="height: 30px; width: 30px; background-color: white; border-radius: 5px;"/></a>
+            <a href="https://www.youtube.com/channel/UCI1rVLD_WL6HwWAZUr19-Xg" target="_blank"><img src="../excelImages/youtubeIcon.png" style="height: 30px; width: 30px; background-color: white; border-radius: 5px;"></a>
+        </div>
+    </div>
+  </footer>
+
+<!-- END MAIN -->
+
+        <!-- Firebase App is always required and must be first -->
+<script src="https://www.gstatic.com/firebasejs/5.5.6/firebase-app.js"/></script>
+
+<!-- Add additional services that you want to use -->
+<script src="https://www.gstatic.com/firebasejs/5.5.6/firebase-auth.js"></script>
+<script>
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyBBS1TD_34ixY7MZ1h2rr-gonqr0NtogsU",
+    authDomain: "excel-exercises.firebaseapp.com",
+    databaseURL: "https://excel-exercises.firebaseio.com",
+    projectId: "excel-exercises",
+    storageBucket: "excel-exercises.appspot.com",
+    messagingSenderId: "43554050270"
+  };
+  firebase.initializeApp(config);
+    
+        // Handle authentication
+    firebase.auth().onAuthStateChanged(function(user) {
+        if (user) {
+            // User is signed in.
+            document.getElementById("logInButton").style.display = "none";
+            document.getElementById("practiceProblemDiv").style.display = "none";
+            // ...
+        } else {
+            // User is not signed in.
+        }
+    }); 
+</script>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
+</body>
+</html>

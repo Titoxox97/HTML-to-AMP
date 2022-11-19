@@ -4,7 +4,7 @@
 
 
     <!-- Google Tag Manager -->
-    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    <script async >(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
     new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
     j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
@@ -36,7 +36,7 @@
     </style>
     
     <!-- Adds the AMP library to the file-->
-    <amp-script async src="https://cdn.ampproject.org/v0.js"></amp-script>
+    <script async src="https://cdn.ampproject.org/v0.js"></script>
 </head>
 <body>
     
@@ -247,11 +247,11 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <!-- END MAIN -->
 
         <!-- Firebase App is always required and must be first -->
-<amp-script src="https://www.gstatic.com/firebasejs/5.5.6/firebase-app.js"></amp-script>
+<script async src="https://www.gstatic.com/firebasejs/5.5.6/firebase-app.js"></script>
 
 <!-- Add additional services that you want to use -->
-<amp-script src="https://www.gstatic.com/firebasejs/5.5.6/firebase-auth.js"></amp-script>
-<amp-script>
+<script async src="https://www.gstatic.com/firebasejs/5.5.6/firebase-auth.js"></script>
+<script async>
   // Initialize Firebase
   var config = {
     apiKey: "AIzaSyBBS1TD_34ixY7MZ1h2rr-gonqr0NtogsU",
@@ -274,7 +274,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             // User is not signed in.
         }
     }); 
-</amp-script>
+</script>
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
 </body>
